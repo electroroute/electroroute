@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:id="@+id/custom_marker_info"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:weightSum="1"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/infocontent_sitename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:shadowColor="@color/colorPrimary"
+                android:singleLine="true"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/infocontent_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Como llegar?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/margin_small"
+                android:drawableLeft="@drawable/ic_maps_directions"
+                android:id="@+id/navigate"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_divider"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+            android:id="@+id/infocontent_siteaddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+                android:minLines="2" />
+
+            <TextView
+                android:id="@+id/infocontent_sitetype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/infocontent_sitedescr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_divider2"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:text="Opiniones"
+                android:id="@+id/opiniones"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_medium"/>
+
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/ranking_number"
+                android:layout_gravity="center_horizontal"
+                    android:layout_row="0"
+                    android:layout_column="1" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/ratingBar_info"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:progressDrawable="@drawable/ratingbar_medium"
+                    android:isIndicator="true"
+                    android:layout_row="0"
+                    android:layout_column="0" />
+
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="numero de votos"
+                android:id="@+id/num_votes"
+                android:layout_gravity="center_horizontal"
+                    android:layout_row="1"
+                    android:layout_column="0" />
+
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver opiniones"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/margin_small"
+                    android:id="@+id/comments_btn"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableRight="@drawable/ic_hardware_keyboard_arrow_down"
+                    android:layout_row="2"
+                    android:layout_column="0" />
+
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opinar"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/margin_small"
+                    android:id="@+id/write_comment"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_image_edit"
+                    android:layout_row="2"
+                    android:layout_column="1" />
+
+            </GridLayout>
+        </LinearLayout>
+</ScrollView>
+
+    <ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/infocontent_comments_list"
+    android:visibility="gone" />
+
+</RelativeLayout>

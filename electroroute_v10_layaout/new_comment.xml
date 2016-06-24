@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Gracias por tu opinión"
+            android:id="@+id/layer_header"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Titulo:"
+            android:id="@+id/titulo_layer"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Haz click para valorar."
+            android:id="@+id/valorar_layer"
+            android:textSize="@dimen/margin_small"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <EditText
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_input"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Comentario:"
+            android:id="@+id/comentario_layer"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/comentario_input"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/ratingBar"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:progressDrawable="@drawable/ratingbar_medium"
+            android:numStars="5"
+            android:rating="2"
+            android:stepSize="1"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textColor="@color/colorPrimaryDark"
+            android:shadowColor="@color/colorPrimary"
+            android:id="@+id/button_cancel"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_gravity="right"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:textColor="@color/colorPrimaryDark"
+            android:shadowColor="@color/colorPrimary"
+            android:id="@+id/button_send"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            />
+
+
+    </GridLayout>
+</LinearLayout>

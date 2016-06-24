@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/wallet_dim_foreground_disabled_holo_dark">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_divider"
+        android:src="@android:drawable/divider_horizontal_bright"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Usuario"
+            android:id="@+id/comment_username"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/margin_small"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Fecha"
+            android:id="@+id/commnet_date"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_margin="@dimen/margin_small"
+            android:textSize="12sp"
+
+            />
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/comment_ratingBar_info"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:isIndicator="true"
+            android:progressDrawable="@drawable/ratingbar_small"
+            android:numStars="5"
+            android:layout_margin="@dimen/margin_small"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Medium Text"
+            android:id="@+id/comment_title"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/margin_small"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Medium Text"
+            android:id="@+id/comment_text"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_margin="@dimen/margin_small"
+            android:textStyle="italic"
+            android:layout_columnSpan="3" />
+    </GridLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_divider2"
+        android:src="@android:drawable/divider_horizontal_bright"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"/>
+
+</RelativeLayout>
